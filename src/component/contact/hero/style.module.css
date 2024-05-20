@@ -1,0 +1,40 @@
+.section {
+    background-image: url(../../../images/hero/006_PEDROJAEN_DJI_0815\ 2\ \(5\).png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-position: center;
+}
+.container{
+    margin: 0 auto;
+    padding: 0 10px;
+    max-width: 1240px;
+    width: 100%;
+}
+.cards{
+    padding: 10px;
+    margin: 0 auto;
+}
+.cards__h1{
+    font-size: 90px;
+    font-family:  Playfair Display SC ;
+    color: rgb(255, 255, 255);
+    text-align: center; 
+}
+.cards__h2{
+    font-size: 32px;
+    font-family:Open sans;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+@media only screen and (max-width: 300px) {
+    .cards__h1{
+        font-size: 42px;
+    }
+    .cards__h2{
+        font-size: 28px;
+    }
+  }

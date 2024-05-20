@@ -1,0 +1,113 @@
+.container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 10px;
+    width: 100%;
+}
+
+.link {
+    display: block;
+    font-size: 22px;
+    font-family: Open sans;
+    margin-bottom: 20px;
+    text-decoration: none;
+}
+
+.cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.Logo {
+    width: 25%;
+}
+
+.cards__item {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.cards__h2 {
+    font-family: Playfair Display SC;
+    text-align: center;
+    font-size: 32px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.IconWhatsap {
+    color: rgb(0, 186, 0);
+}
+
+.IconCall {
+    color: rgb(112, 112, 112);
+}
+
+.strong {
+    font-family: open sans;
+    font-size: 20px;
+}
+
+.cards_drawer {
+    display: flex;
+    justify-content: start;
+}
+
+.MenuIcon {
+    color: rgb(55, 55, 55);
+    display: flex;
+    justify-content: end;
+}
+
+.Box {
+    padding: 20px;
+}
+
+.cards_drawer__top {
+    width: 100%;
+}
+
+.cards__p {
+    width: 100%;
+    font-family: Open sans;
+    font-weight: 500;
+    font-size: 28px;
+    margin-top: 50px;
+}
+.CardButton {
+    display: flex;
+    justify-content: end;
+    margin: 0 end;
+}
+
+@media only screen and (max-width: 910px) {
+    .cards {
+        justify-content: space-between;
+    }
+
+    .card {
+        display: none;
+    }
+    .cards__item {
+        width: 20%;
+    }
+
+    .CardButton {
+        display: flex;
+        justify-content: end;
+    }
+
+    .Box {
+        width: 200px;
+    }
+}

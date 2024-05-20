@@ -1,0 +1,22 @@
+.container{
+    max-width: 1260px;
+    margin: 0 auto;
+    padding: 0 10px;
+    width: 100%;
+}
+.cards__h1{
+    font-size: 22px;
+    font-family: Open sans;
+    color: black;
+}
+.cards__p{
+    font-size: 16px;
+    font-family: Open sans;
+    color: black;
+    line-height: 1.9;
+}
+@media only screen and (max-width: 730px) {
+   .cards__h1{
+    text-align: center;
+   }
+}

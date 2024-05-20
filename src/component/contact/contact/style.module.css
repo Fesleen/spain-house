@@ -1,0 +1,94 @@
+.container{
+    max-width: 1260px;
+    margin: 0 auto;
+    padding: 0 10px;
+    width: 100%;
+    margin-top: 70px;
+}
+.cards{
+    width: 70%;
+    background-color: white;
+    margin: 0 auto;
+    padding: 15px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.cards__border{
+    border: 2px solid rgb(35, 35, 35);
+    padding: 30px;
+}
+.cards__h1{
+    font-size: 38px;
+    text-align: center;
+    font-family: Playfair Display SC;
+    color: gray;
+}
+.cards__p{
+    font-size: 16px;
+    text-align: center;
+    font-family: Open sans;
+    color: rgb(85, 85, 85);
+}
+.cards__item{
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.card {
+    display: flex;
+    align-items: center;
+}
+
+.cards__h2 {
+    font-family: Playfair Display SC;
+    text-align: center;
+    font-size: 32px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+.strong{
+    font-family:Open sans;
+    text-align: center;
+    font-size: 18px;
+    color: rgb(140, 140, 140);
+}
+.IconWhatsap {
+    color: rgb(0, 186, 0);
+}
+
+.IconCall {
+    color: rgb(112, 112, 112);
+}
+.cards__form{
+    margin: 0 auto;
+}
+.input{
+    width: auto;
+    display: block;
+}
+.div{   
+    width: auto;
+    display: block;
+    margin-top: 30px;
+}
+.cards__button{
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+.card__button{
+    background-color: gray;
+    color: white;
+    font-size: 22px;
+    font-family: Open sans;
+    width: 200px;
+    height: 55px;
+    border: transparent;
+}
+
+
+@media only screen and (max-width: 1210px) {
+.box{
+    width: 95%;
+}
+}
