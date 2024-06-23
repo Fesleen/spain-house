@@ -40,17 +40,16 @@ const Contact = () => {
               <strong className={styles.strong}>+79 951 120 365</strong>
             </div>
           </div>
-          <div className={styles.cards__form}>
-            <div className={styles.cards__form} id='contact'>
-              <form className={styles.cards__form__input} onSubmit={HandleSubmit}>
-                <input className={styles.input} id="outlined-basic" type='text' placeholder='Name' name='name' />
-                <input className={styles.input} id="outlined-basic" type='email' placeholder='Email' name='email' />
-                <input className={styles.input} id="outlined-basic" type='number' placeholder='Mobil phone' name='phone' />
-                <div className={styles.cards__button}>
-                  <button className={styles.card__form__button} type='submit'>Send</button>
-                </div>
-              </form>
-            </div>
+          <div className={styles.cards__form} id='contact'>
+            <h1 className={styles.cards__form__h1}>Fill in the table to contact us!</h1>
+            <form onSubmit={HandleSubmit}>
+              <input className={styles.input} id="outlined-basic" type='text' placeholder='Name' name='name' />
+              <input className={styles.input} id="outlined-basic" type='email' placeholder='Email' name='email' />
+              <input className={styles.input} id="outlined-basic" type='number' placeholder='Mobil phone' name='phone' />
+              <div className={styles.cards__button}>
+                <button className={styles.card__form__button} type='submit'>Send</button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
