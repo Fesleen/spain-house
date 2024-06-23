@@ -11,7 +11,7 @@ const MainContact = () => {
         <div className={styles.cards}>
           <div className={styles.cards__right}>
             <div className={styles.cards__right__item}>
-              <img className={styles.Img} src={Img} alt="" />
+              <img className={styles.Img} src={Img} alt="img" />
             </div>
           </div>
           <div className={styles.cards__left}>

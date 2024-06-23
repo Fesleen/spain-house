@@ -9,10 +9,10 @@ const Footer = () => {
     <div className={styles.section}>
       <div className={styles.container}>
         <div className={styles.cards}>
-          <img className={styles.img} src={Logo} alt="" />
+          <img className={styles.img} src={Logo} alt="img" />
           <div className={styles.cards__item}>
-          <img className={styles.images} src={Insta} alt="" />
-          <img className={styles.images} src={Facebook} alt="" />
+          <img className={styles.images} src={Insta} alt="img"  />
+          <img className={styles.images} src={Facebook} alt="img"  />
           </div>
           <h2 className={styles.cards__h2}>© Все права защищены. Агентство недвижимости Spain House </h2>
         </div>

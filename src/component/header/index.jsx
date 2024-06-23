@@ -61,7 +61,7 @@ const Header = () => {
     <>
       <div className={styles.container} >
         <div className={styles.cards} >
-          <img className={styles.Logo} src={Logo} alt="" />
+          <img className={styles.Logo} src={Logo} alt="img" />
           <div className={styles.cards__item} >
             <div className={styles.card} >
               <WhatsAppIcon className={styles.IconWhatsap} />

@@ -7,13 +7,13 @@ const ObjectMain = () => {
     <div className={styles.container}>
       <div className={styles.cards}>
         <div className={styles.cards__left}>
-          <img className={styles.Img} src={Img} alt="" />
+          <img className={styles.Img} src={Img} alt="img"  />
           <div className={styles.cards__item}>
-            <img className={styles.images1} src={Img} alt="" />
-            <img className={styles.images2} src={Img} alt="" />
-            <img className={styles.images3} src={Img} alt="" />
-            <img className={styles.images4} src={Img} alt="" />
-            <img className={styles.images5} src={Img} alt="" />
+            <img className={styles.images1} src={Img} alt="img"  />
+            <img className={styles.images2} src={Img} alt="img"  />
+            <img className={styles.images3} src={Img} alt="img"  />
+            <img className={styles.images4} src={Img} alt="img"  />
+            <img className={styles.images5} src={Img} alt="img"  />
           </div>
         </div>
         <div className={styles.cards__right}>
