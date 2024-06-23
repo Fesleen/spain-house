@@ -1,41 +1,22 @@
-import React, { useEffect } from 'react';
-import styles  from "./style.module.css"
+import React from 'react';
+import styles from "./style.module.css"
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import CallIcon from '@mui/icons-material/Call';
-import Box from '@mui/material/Box';
-import TextField from '@mui/material/TextField';
-import { useDispatch, useSelector } from "react-redux";
-import { PostContact } from "../../../redux/contact/index";
+import { useDispatch } from "react-redux";
+import { PostContact } from '../../../redux/contact';
 
 const Contact = () => {
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(PostContact());
-  }, [dispatch]);
-
-  const contact = useSelector((state) => state.contact.postContact);
-  const contactData = contact?.Data;
-  const contactLoading = contact?.Loading;
-  const contactError = contact?.Error;
-
-  if (contactLoading) {
-    return <h1>Loading...</h1>;
-  }
-
-  if (contactError) {
-    return <h1>Error</h1>;
-  }
-
-  if (!contactData || contactData.length === 0) {
-    return <h1>No data available</h1>;
-  }
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    console.log('Form submitted');
+  const dispatch = useDispatch()
+  const HandleSubmit = (e) => {
+    e.preventDefault();
+    const body = {
+      name: e.target.name.value,
+      email: e.target.email.value,
+      phone: e.target.phone.value
+    }
+    dispatch(PostContact(body))
+    console.log(body);
   };
-
   return (
     <div className={styles.container}>
       <div className={styles.cards}>
@@ -60,25 +41,16 @@ const Contact = () => {
             </div>
           </div>
           <div className={styles.cards__form}>
-            {contactData.map((elem) => (
-              <form key={elem.id} onSubmit={handleSubmit}>
-                <Box
-                  className={styles.box}
-                  sx={{
-                    '& > :not(style)': { m: 1, width: '100ch' },
-                  }}
-                >
-                  <TextField className={styles.input} id="outlined-basic" type='text' placeholder='Артикул: R3304693' name={elem.title} />
-                  <TextField className={styles.input} id="outlined-basic" type='text' placeholder='Имя*' name={elem.name} />
-                  <TextField className={styles.input} id="outlined-basic" type='email' placeholder='Email адрес*' name={elem.email} />
-                  <TextField className={styles.input} id="outlined-basic" type='number' placeholder='Номер телефона' name={elem.number} />
-                  <TextField className={styles.input} id="outlined-basic" type='text' placeholder='Сообщение*' name={elem.sent} />
-                  <div className={styles.cards__button}>
-                    <button className={styles.card__button} type='submit'>отправить</button>
-                  </div>
-                </Box>
+            <div className={styles.cards__form} id='contact'>
+              <form className={styles.cards__form__input} onSubmit={HandleSubmit}>
+                <input className={styles.input} id="outlined-basic" type='text' placeholder='Name' name='name' />
+                <input className={styles.input} id="outlined-basic" type='email' placeholder='Email' name='email' />
+                <input className={styles.input} id="outlined-basic" type='number' placeholder='Mobil phone' name='phone' />
+                <div className={styles.cards__button}>
+                  <button className={styles.card__form__button} type='submit'>Send</button>
+                </div>
               </form>
-            ))}
+            </div>
           </div>
         </div>
       </div>

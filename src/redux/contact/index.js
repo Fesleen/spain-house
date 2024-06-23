@@ -1,40 +1,39 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import axios from "axios";
 
-export const PostContact = createAsyncThunk("Form/post", async (formData) => {
-  return await axios.get('http://localhost:8000/contact', formData)
-    .then(res => res.data);
+const TOKEN = '7236837279:AAH1eakMjF6ZClhKunEotfyHVRI3cDlNgVU';
+const CHAT_ID = '-1002152542741';
+
+export const PostContact = createAsyncThunk("contact/post", async (body) => {
+  const info = `Name : ${body.name} %0ATelephone: ${body.phone}  %0AEmail: ${body.email}`;
+  await fetch(`https://api.telegram.org/bot${TOKEN}/sendMessage?chat_id=${CHAT_ID}&text=${info}&parse_mode=html`);
 });
 
 const ContactSlice = createSlice({
-  name: "Form",
+  name: "contact",
   initialState: {
     postContact: {
       Error: false,
-      Loading: false,
       Success: false,
-      Data: [], 
+      Loading: false,
     },
   },
   extraReducers: (builder) => {
     builder
       .addCase(PostContact.pending, (state) => {
         state.postContact.Loading = true;
-        state.postContact.Error = false;
-        state.postContact.Success = false;
       })
-      .addCase(PostContact.fulfilled, (state, action) => {
+      .addCase(PostContact.fulfilled, (state) => {
         state.postContact.Loading = false;
         state.postContact.Success = true;
-        state.postContact.Data = action.payload;
         state.postContact.Error = false;
       })
-      .addCase(PostContact.rejected, (state, action) => {
-        state.postContact.Loading = false;
+      .addCase(PostContact.rejected, (state) => {
         state.postContact.Error = true;
         state.postContact.Success = false;
+        state.postContact.Loading = false;
       });
   },
 });
 
+export const {} = ContactSlice.actions;
 export default ContactSlice.reducer;
